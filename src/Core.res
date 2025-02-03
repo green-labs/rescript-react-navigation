@@ -28,7 +28,7 @@ type screenProps = {navigation: navigation, route: route}
 
 type getIdOptions = {params: params}
 
-type layout = {width: float, height: float}
+type layout = {width?: float, height?: float}
 
 type backBehavior = [#firstRoute | #initialRoute | #order | #history | #none]
 
