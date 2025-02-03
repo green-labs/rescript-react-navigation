@@ -93,6 +93,9 @@ module type NavigatorModule = {
   }
 
   module Screen: {
+    type event
+    type listeners = {tabPress?: event => unit}
+
     @react.component
     let make: (
       ~name: string,
@@ -103,6 +106,7 @@ module type NavigatorModule = {
       ~component: React.component<screenProps>=?,
       ~getComponent: unit => React.component<screenProps>=?,
       ~children: screenProps => React.element=?,
+      ~listeners: screenProps => listeners=?,
     ) => React.element
   }
 
