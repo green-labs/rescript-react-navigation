@@ -57,7 +57,9 @@ type headerLargeTitleStyle = {
   color: option<Color.t>,
 }
 
-type headerStyle = {backgroundColor?: Color.t}
+// !!! Documentation states it only supports backgroundColor, but in practice it supports more properties
+// type headerStyle = {backgroundColor?: Color.t}
+type headerStyle = Style.t
 
 type headerTitleStyle = {
   fontFamily?: string,
