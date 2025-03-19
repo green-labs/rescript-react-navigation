@@ -1,5 +1,25 @@
 # Changelog of `rescript-react-navigation`
 
+## 7.0.3 - 2025-03-05
+
+- Update binding of `tabBarLabel` in BottomTabs and MaterialBottomTabs [#75](https://github.com/rescript-react-native/rescript-react-navigation/pull/75) by @namenu
+
+## 7.0.2 - 2025-02-12
+
+- Screen: fix getId prop [#74](https://github.com/rescript-react-native/rescript-react-navigation/pull/74) by @Freddy03h
+
+## 7.0.1 - 2025-02-02
+
+- MaterialTopTabs: fix sceneStyle [#73](https://github.com/rescript-react-native/rescript-react-navigation/pull/73) by @cknitt
+
+## 7.0.0 - 2025-01-19
+
+- upgrade to `react-navigation` v7 [#72](https://github.com/rescript-react-native/rescript-react-navigation/pull/72) by [Freddy03h](https://github.com/Freddy03h)
+  - All changes listed in [Upgrading from 6.x](https://reactnavigation.org/docs/upgrading-from-6.x/)
+  - more bindings for `Elements`
+  - upgrade to rescript 11.1
+  - remove unnecessary trailing unit, and deprecate `___WithParams` functions
+
 ## 6.3.0 - 2024-12-23
 
 - Linking [#71](https://github.com/rescript-react-native/rescript-react-navigation/pull/71) by [@Freddy03h](https://github.com/Freddy03h)

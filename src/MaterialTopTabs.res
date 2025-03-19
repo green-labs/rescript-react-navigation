@@ -25,7 +25,7 @@ type options = {
   tabBarIndicator?: unit => React.element,
   tabBarIndicatorStyle?: Style.t,
   tabBarIndicatorContainerStyle?: Style.t,
-  tabBarTestID?: string,
+  tabBarButtonTestID?: string,
   tabBarActiveTintColor?: string,
   tabBarInactiveTintColor?: string,
   tabBarPressColor?: string,
@@ -42,6 +42,7 @@ type options = {
   \"lazy"?: bool,
   lazyPreloadDistance?: float,
   lazyPlaceholder?: unit => React.element,
+  sceneStyle?: Style.t,
 }
 
 type tabBarPosition = [#top | #bottom]
@@ -86,9 +87,9 @@ module type NavigatorModule = {
       ~tabBarPosition: tabBarPosition=?,
       ~keyboardDismissMode: keyboardDismissMode=?,
       ~initialLayout: layout=?,
-      ~sceneContainerStyle: Style.t=?,
       ~style: Style.t=?,
       ~tabBar: tabBarProps => React.element=?,
+      ~layout: layoutNavigatorParams => React.element=?,
       ~children: React.element,
     ) => React.element
   }
@@ -107,7 +108,7 @@ module type NavigatorModule = {
       ~navigationKey: string=?,
       ~options: screenOptionsParams => options=?,
       ~initialParams: 'params=?,
-      ~getId: getIdOptions=?,
+      ~getId: getIdOptions => option<string>=?,
       ~component: React.component<screenProps>=?,
       ~getComponent: unit => React.component<screenProps>=?,
       ~children: screenProps => React.element=?,
